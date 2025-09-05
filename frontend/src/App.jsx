@@ -34,7 +34,7 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Home searchCity={searchCity} setSearchCity={setSearchCity}/>}/>
         <Route path='/signup' element={<Signup/>}/>
-        <Route path='/login' element={<Login/>}/>
+        <Route path='/login' element={<Login setUser={setUser}/>}/>
         <Route path='/rooms' element={<Rooms searchCity={searchCity} setSearchCity={setSearchCity}/>}/>
         <Route path='/rooms/:id' element={<RoomInDetail/>}/>
         <Route path='/my-bookings' element={<UserProtectedRoute><MyBooking/></UserProtectedRoute>}/>

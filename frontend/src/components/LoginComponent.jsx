@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import axiosInstance from '../configs/axiosConfig'
 import {toast,Toaster} from 'react-hot-toast'
 
-const LoginComponent = () => {
+const LoginComponent = ({setUser}) => {
   const navigate = useNavigate();
 
   const [userData,setUserData] = useState({
@@ -36,6 +36,7 @@ const LoginComponent = () => {
         if(res.data.success){
            localStorage.setItem("token", res.data.token);
            localStorage.setItem("user", res.data.user);
+           setUser(res.data.user);
 
            toast.success(res.data.message);
 
