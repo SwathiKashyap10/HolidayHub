@@ -37,8 +37,6 @@ const LoginComponent = () => {
            localStorage.setItem("token", res.data.token);
            localStorage.setItem("user", res.data.user);
 
-           window.location.reload();
-
            toast.success(res.data.message);
 
            // Navigate after 1.5s so toast is visible
