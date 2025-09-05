@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import axiosInstance from '../configs/axiosConfig'
 import {toast,Toaster} from 'react-hot-toast'
 
-const SignupComponent = () => {
+const SignupComponent = ({setUser}) => {
 
   const navigate = useNavigate();
   
@@ -41,23 +41,15 @@ const SignupComponent = () => {
         //handel response
         if(res.data.success){
            localStorage.setItem("token", res.data.token);
-           localStorage.setItem("user", JSON.stringify(res.data.user));
-           setTimeout(() => {
-             toast.success(res.data.message);
-           }, 2000);
-           navigate("/rooms");
-                      
-           // Navigate after toast disappears
-           setTimeout(() => {
-             window.location.reload();
-           }, 2000);
-
+           localStorage.setItem("user", res.data.user);
+           setUser(res.data.user);
+           
            toast.success(res.data.message);
-
-           // Navigate after toast disappears
+           
+           // Navigate after 1.5s so toast is visible
            setTimeout(() => {
              navigate("/rooms");
-           }, 2000);
+           }, 1500);
         }else{
            toast.error(res.data.message);
         }

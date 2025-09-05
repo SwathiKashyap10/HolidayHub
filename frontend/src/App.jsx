@@ -33,7 +33,7 @@ const App = () => {
       {!location.pathname.startsWith('/admin') && <Navbar user={user} setUser={setUser}/>}
       <Routes>
         <Route path='/' element={<Home searchCity={searchCity} setSearchCity={setSearchCity}/>}/>
-        <Route path='/signup' element={<Signup/>}/>
+        <Route path='/signup' element={<Signup setUser={setUser}/>}/>
         <Route path='/login' element={<Login setUser={setUser}/>}/>
         <Route path='/rooms' element={<Rooms searchCity={searchCity} setSearchCity={setSearchCity}/>}/>
         <Route path='/rooms/:id' element={<RoomInDetail/>}/>
