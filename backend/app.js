@@ -16,7 +16,10 @@ await connectDB();
 await connectCloudinary();
 
 //middelware
-app.use(cors());
+app.use(cors({
+  origin: "https://holidayhub-frontend.onrender.com", // 👈 better to use specific origin in dev
+  credentials: true               // if using cookies or tokens
+}));
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 
