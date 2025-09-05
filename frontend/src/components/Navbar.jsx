@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
-import logo from '../assets/logo.png'
 import {toast,Toaster} from 'react-hot-toast'
 
 const Navbar = ({ user, setUser }) => {
@@ -36,7 +35,7 @@ const Navbar = ({ user, setUser }) => {
       <div className="flex items-center justify-between px-8 max-sm:px-8  py-4 transition-all relative">
         {/* logo */}
         <div className='flex flex-row gap-2 items-baseline text-2xl '>
-          <Link to="/"><img src={logo} alt="logo" className="h-9 w-9 object-cover " /></Link>
+          <Link to="/"><img src="https://res.cloudinary.com/demo6uvtg/image/upload/v1757073583/logo_izz8n4.png" alt="logo" className="h-9 w-9 object-cover " /></Link>
           <h2>HolidayHub</h2>
         </div>
         {/* nav elements */}

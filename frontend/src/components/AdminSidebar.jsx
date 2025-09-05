@@ -1,6 +1,5 @@
 // AdminSidebar.jsx
 import React, { useEffect, useState } from 'react'
-import adminImg from '../assets/adminProfile.jpg'
 import { LayoutDashboard, PlusSquare, Car, CalendarCheck } from "lucide-react";
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { CiLogout } from "react-icons/ci";
@@ -63,7 +62,7 @@ const AdminSidebar = () => {
         ${isOpen ? 'translate-x-0' : '-translate-x-full'} md:translate-x-0`}
       >
         <div className='flex flex-col items-center'>
-          <img src={adminImg} alt='admin profile' className='w-16 h-16 rounded-full object-cover border'/>
+          <img src="https://res.cloudinary.com/demo6uvtg/image/upload/v1757073476/adminProfile_j5lmca.jpg" alt='admin profile' className='w-16 h-16 rounded-full object-cover border'/>
           <p className='text-gray-600 text-md mt-2 font-semibold'>{admin || "Admin name"}</p>
         </div>
 

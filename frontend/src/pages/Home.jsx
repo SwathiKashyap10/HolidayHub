@@ -5,7 +5,7 @@ import Banner from '../components/Banner'
 import CustomersReview from '../components/CustomersReview'
 import Footer from '../components/Footer'
 import FadeInWhenVisible from '../components/FadeInWhenVisible'
-import {toast,Toaster} from 'react-hot-toast'
+import {Toaster} from 'react-hot-toast'
 
 const Home = ({searchCity,setSearchCity}) => {
   
