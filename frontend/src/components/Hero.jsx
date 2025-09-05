@@ -64,7 +64,7 @@ const Hero = ({searchCity,setSearchCity}) => {
                 <input type='date' id='check-in date' value={checkIn} onChange={(e)=>setCheckIn(e.target.value)} min={new Date().toISOString().split('T')[0]} className='text-sm text-gray-500 pt-2' required/>
             </div>
             <div className='flex flex-col items-start'>
-                <label htmlFor='check-out date'>Return Date</label>
+                <label htmlFor='check-out date'>Check-out Date</label>
                 <input type='date' id='check-out date' value={checkOut} onChange={(e)=>setCheckOut(e.target.value)} min={new Date().toISOString().split('T')[0]} className='text-sm text-gray-500 pt-2' required/>
             </div>
             <button onClick={HandleSearch} className='bg-extra hover:bg-primary-dull px-8 py-2 md:px-4 md:py-1 rounded-3xl text-white cursor-pointer transition-all lg:ml-10'><i className="fa-solid fa-magnifying-glass"></i> Search</button>

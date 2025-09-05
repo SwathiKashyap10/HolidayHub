@@ -36,15 +36,15 @@ const LoginComponent = () => {
         if(res.data.success){
            localStorage.setItem("token", res.data.token);
            localStorage.setItem("user", res.data.user);
+
+           window.location.reload();
+
+           toast.success(res.data.message);
+
+           // Navigate after 1.5s so toast is visible
            setTimeout(() => {
-             toast.success(res.data.message);
-           }, 2000);
-           navigate("/rooms");
-           
-          // Navigate after toast disappears
-           setTimeout(() => {
-             window.location.reload();
-           }, 2000);
+             navigate("/rooms");
+           }, 1500);
         }else{
            toast.error(res.data.message);
         }
